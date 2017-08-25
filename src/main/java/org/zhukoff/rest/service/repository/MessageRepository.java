@@ -25,7 +25,7 @@ public class MessageRepository {
         return entityManager.find(Message.class, id);
     }
 
-    public List<Message> byId() {
+    public List<Message> getAll() {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery criteriaQuery = criteriaBuilder.createQuery(Message.class);
         return entityManager.createQuery(criteriaQuery).getResultList();
